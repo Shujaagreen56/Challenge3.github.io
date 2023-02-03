@@ -35,10 +35,11 @@ function requirements() {
   }
   // ask user if they want special characters 
   spec = confirm("Do you want special characters ?");
+  
 
   //ask user if they want a number 
   num = confirm("Do you want a number ?");
-
+ 
   // ask user if they want lower case 
 
   low = confirm("Do you want a lower case ?");
@@ -60,26 +61,33 @@ function generate() {
 }
 
 function passwordlogic() {// tell the function to pick from the letters 
- var answer = [];
+  var answer = [];
   var myArray = [];
   if (upper == true) {
     myArray = myArray.concat(uppercase);
-  answer.push(random(upper)); 
-  } if (low == true) 
-  {
-    myArray = myArray.concat(lower)
+    answer.push(random(upper));
+  } if (low == true) {
+    myArray = myArray.concat(lower);
+    answer.push(random(low));
   }
-  
+  if (spec == true) {
+    myArray = myArray.concat(charset);
+    answer.push(random(spec));
+  }
+  if (num == true) {
+    myArray = myArray.concat(num);
+    myArray = myArray.concat(numbers);
+  }
   // add logic for two more arrays 
 
   //if everything is false, output an alert. 
-// if everytime an array is true we have to make sure we must be sure to add at least one of that value
-// upper code looks like it is logical,  set that up for each array. add the .push(random) to the answer, which includes at least one value of each chosen array.
-// more desrciptive variables, make it easy to understand. 
+  // if everytime an array is true we have to make sure we must be sure to add at least one of that value
+  // upper code looks like it is logical,  set that up for each array. add the .push(random) to the answer, which includes at least one value of each chosen array.
+  // more desrciptive variables, make it easy to understand. 
 
-var crranswerlength = answer.length; 
+  var crranswerlength = answer.length;
 
-    for (var i = crranswerlength -1 ; i < passlength; i++) {
+  for (var i = crranswerlength - 1; i < passlength; i++) {
     answer[i] = random(myArray);
   }
   console.log(myArray);
@@ -92,6 +100,12 @@ function random(options) {
   return options[myIndex];
 }
 
+
+var options = [
+  passnum = numbers,
+  passspec = charset ,
+  passuppercase = uppercase ,
+  passlow = lower ];
 
 
 // var index = Math.floor(Math.random() * options.length);
