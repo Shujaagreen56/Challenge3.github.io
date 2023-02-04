@@ -1,1 +1,4 @@
 # Password Generator Starter Code
+This is my assignment challenge 3. 
+I learned a few really key concepts. Objects, Variables, strings, Arrays, Functions, Methods. I learned ow to incorporate elemnts. And how to use DOM manipulation. 
+I believe objects and variables define the topic on which you want to discuss in further code. The strings and arrays are the points you want to make about that topic. the function is the logical reasoning that you want the page to make from those ideas and then the method, or any DOM manipulation, is the action you want to the ideas to make, based on logical reasoning. I am still not completely confident in my ability to do this well and quickly with little help, but I do sort of get the concepts of how to build a javascript page. I am nervous and excited to work on the next password. 
